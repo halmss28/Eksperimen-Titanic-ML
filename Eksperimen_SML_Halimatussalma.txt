@@ -1,0 +1,31 @@
+Judul Eksperimen:
+Latihan Titanic Classification dengan Logistic Regression
+
+Tujuan:
+Memprediksi kemungkinan penumpang Titanic selamat berdasarkan data demografi dan informasi keberangkatan.
+
+Langkah Eksperimen:
+1. Preprocessing
+   - Mengisi nilai kosong pada fitur Age dengan median
+   - Mengisi nilai kosong pada fitur Embarked dengan modus
+   - Encode variabel kategorikal (Sex, Embarked)
+   - Drop fitur-fitur tidak relevan (PassengerId, Name, Ticket, Cabin)
+
+2. Modeling
+   - Menggunakan model Logistic Regression dari scikit-learn
+   - Parameter: max_iter=200
+
+3. Evaluasi
+   - Akurasi model: ~0.81 (hasil dari MLflow)
+   - Logging dilakukan menggunakan MLflow (tracking dan artifacts)
+
+4. Pencatatan
+   - Semua parameter dan hasil dicatat ke MLflow
+   - Model berhasil disimpan sebagai artifact (model.pkl, conda.yaml, dll)
+
+Catatan Tambahan:
+- Eksperimen berjalan di lokal dan MLflow UI dapat diakses di http://127.0.0.1:5000
+- Dataset: train.csv dari Titanic Dataset (Kaggle)
+
+Disusun oleh:
+Halimatussalma
